@@ -11,3 +11,4 @@ Nedbrutte kompetansemål| Låg | Middels | Høg
 ## Kjelder
 
 - [Mathjax](https://www.mathjax.org/)
+- [Wikipedia-Coloumbkonstanten](https://en.wikipedia.org/wiki/Coulomb_constant)
