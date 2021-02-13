@@ -9,6 +9,10 @@
   <!-- import Mathjax -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- scripts for animations -->
+  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+  <script src="../assets/Animations/Work r - R.js"></script>
+  <script src="load animations.js"></script>
 </head>
 <body>
 
@@ -77,7 +81,14 @@
           
         </p>
       </article>
-      <aside>Her finner vi illustrasjonene</aside>
+      <aside>
+        <!-- Adobe generated -->
+        <div id="animation_container">
+          <canvas id="canvas" width="30" height="30" ></canvas>
+          <div id="dom_overlay_container">
+          </div>
+        </div>
+      </aside>
     </section>
   </main>
 

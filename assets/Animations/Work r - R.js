@@ -250,7 +250,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Work r _ R_atlas_1.png", id:"Work r _ R_atlas_1"}
+		{src:"../assets/Animations/images/Work r _ R_atlas_1.png", id:"Work r _ R_atlas_1"}
 	],
 	preloads: []
 };
