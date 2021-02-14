@@ -1,8 +1,8 @@
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
-  canvas = document.getElementById("canvas");
-  anim_container = document.getElementById("animation_container");
-  dom_overlay_container = document.getElementById("dom_overlay_container");
+  canvas = document.getElementById("canvas_work");
+  anim_container = document.getElementById("animation_container_work");
+  dom_overlay_container = document.getElementById("dom_overlay_container_work");
   var comp=AdobeAn.getComposition("4C5122039BDB28438E22563FEE19A246");
   var lib=comp.getLibrary();
   var loader = new createjs.LoadQueue(false);
