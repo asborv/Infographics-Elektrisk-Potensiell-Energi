@@ -13,7 +13,9 @@
   <!-- link https://www.youtube.com/watch?v=ZdbudxV3bYI&feature=emb_title&ab_channel=SeazenStudio -->
   <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
   <script src="../assets/Animations/Work r - R.js"></script>
-  <script src="load animations.js"></script>
+  <script src="../assets/Animations/Hanging ball.js"></script>
+  <script src="load work-animations.js"></script>
+  <script src="load ball-animations.js"></script>
 </head>
 <body>
 
@@ -101,7 +103,13 @@
         </ol>
         </article>
       </article>
-      <aside>Illustrasjonar her</aside>
+      <aside>
+        <div id="animation_container_ball">
+          <canvas id="canvas_ball"></canvas>
+          <div id="dom_overlay_container_ball">
+          </div>
+        </div>
+      </aside>
     </section>
 
     <section>
@@ -145,9 +153,9 @@
       </article>
       <aside>
         <!-- Adobe generated -->
-        <div id="animation_container">
-          <canvas id="canvas" width="30" height="30"></canvas>
-          <div id="dom_overlay_container">
+        <div id="animation_container_work">
+          <canvas id="canvas_work" width="30" height="30"></canvas>
+          <div id="dom_overlay_container_work">
           </div>
         </div>
       </aside>
