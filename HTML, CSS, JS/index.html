@@ -69,6 +69,42 @@
     </section>
 
     <section>
+      <h2>Potensiell energi med ball</h2>
+      <article>
+        Ein ball heng i ei snor. Du veit at han har ein potensiell energi gjeve ved \(E_p=mgh\), der \(h\) er avstanden til bakken.
+        Du veit at dette stemmer fordi det er arbeidet som tyngdekrafta gjer på ballen over avstanden \(h\).
+        Matematisk seier vi at:
+        $$
+          \begin{aligned}
+            E_p&=W \\
+            &=\int_0^h{G\ dx} \\
+            &=\int_0^h{mg\ dx} \\
+            &=\left[mgx\right]_0^h \\
+            &=mgh
+          \end{aligned}
+        $$
+        I løpet av fallet vert den potensielle energien omforma til kinetisk energi.
+        Ballen fell <b>med</b> tyngdekrafta, og den potensielle energien minkar.
+        <br>
+        <br>
+        Du tenkjer at det ville vore verkeleg kult å sleppe ballen frå takhøgd.
+        Men då må du fyrst gjere eit arbeid på ballen, <b>mot</b> tyngdekrafta.
+        Då aukar den potensielle energien.
+        Dermed konkluderer du med at ballen har <i>negativ</i> potensiell energi i forhold til taket.
+        <br>
+        <br>
+        <h3>Vi tek med oss 3 viktige reglar:</h3>
+        <ol>
+          <li>Potensiell energi målast ut ifrå eit valfritt nullpunkt</li>
+          <li>Potensiell energi aukar når ein gjer eit arbeid <b>mot</b> kraftretninga</li>
+          <li>Potensiell energi minkar når ein gjer eit arbeid <b>med</b> kraftretninga</li>
+        </ol>
+        </article>
+      </article>
+      <aside>Illustrasjonar her</aside>
+    </section>
+
+    <section>
       <h2>Arbeid til ei kuleladning</h2>
       <article>
         <p>
@@ -79,13 +115,38 @@
           <br>
           Vidare veit vi at potensiell energi er arbeidet som vert utført frå noverande stad (\(r\)) til eit nullpunkt (\(R\)).
           I vårt system, er \(r\) og \(R\) to avstandar frå sentrum av \(Q\).
-          
+          <br>
+          <br>
+          Arbeid er det bestemte integralet av krafta mellom to punkt. Vi kjenner kraft, noverande posisjon og "målet". Dermed kan vi trikse litt med algebra. Hugs at \(F=\frac{kQq}{x^2}\):
+          $$
+            \begin{aligned}
+              W&=\int_r^R{F\ dx} \\
+              &=\int_r^R{\frac{kQq}{x^2}\ dx} \\
+              &=kQq*\int_r^R{\frac{1}{x^2}\ dx} \\
+              &=kQq\left[-\frac{1}{x}\right]_r^R \\
+              &=kQq\left(\frac{1}{r}-\frac{1}{R}\right)
+            \end{aligned}
+          $$
+          I dette uttrykket, er det éin variabel som ikkje vert fastsett av systemet, nemleg \(R\).
+          Vi målar energien i \(r\) i forhold til <i>nullnivået</i> \(R\), så vi må ha eit fast punkt.
+          Sjå føre deg at vi held ein ball i lufta, og skal måle den potensielle energien. Det er naturleg å rekne bakken som nullnivået.
+          Men kva om nullnivået er på eit hustak? Då vert den potensielle energien negativ, men det går heilt fint!
+          Dette nyttar vi med kuleladningane, og set nemleg nullnivået \(R\to\infty\).
+          Vi set dette inn i uttrykket, og ser kvifor dette er lurt:
+          $$
+            \begin{aligned}
+              \lim_{R\to\infty}{W}&=\lim_{R\to\infty}{kqQ\left(\frac{1}{r}-\frac{1}{R}\right)} \\
+              &=kQq\left(\frac{1}{r}-\frac{1}{\infty}\right) \\
+              &=kQq\left(\frac{1}{r}\right) \\
+              &=\frac{kQq}{r}
+            \end{aligned}
+          $$
         </p>
       </article>
       <aside>
         <!-- Adobe generated -->
         <div id="animation_container">
-          <canvas id="canvas" width="30" height="30" ></canvas>
+          <canvas id="canvas" width="30" height="30"></canvas>
           <div id="dom_overlay_container">
           </div>
         </div>
