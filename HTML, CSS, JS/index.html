@@ -79,7 +79,32 @@
           <br>
           Vidare veit vi at potensiell energi er arbeidet som vert utført frå noverande stad (\(r\)) til eit nullpunkt (\(R\)).
           I vårt system, er \(r\) og \(R\) to avstandar frå sentrum av \(Q\).
-          
+          <br>
+          <br>
+          Arbeid er det bestemte integralet av krafta mellom to punkt. Vi kjenner kraft, noverande posisjon og "målet". Dermed kan vi trikse litt med algebra. Hugs at \(F=\frac{kQq}{x^2}\):
+          $$
+            \begin{aligned}
+              W&=\int_r^R{F dx} \\
+              &=\int_r^R{\frac{kQq}{x^2}dx} \\
+              &=kQq*\int_r^R{\frac{1}{x^2}dx} \\
+              &=kQq\left[-\frac{1}{x}\right]_r^R \\
+              &=kQq\left(\frac{1}{r}-\frac{1}{R}\right)
+            \end{aligned}
+          $$
+          I dette uttrykket, er det éin variabel som ikkje vert fastsett av systemet, nemleg \(R\).
+          Vi målar energien i \(r\) i forhold til <i>nullnivået</i> \(R\), så vi må ha eit fast punkt.
+          Sjå føre deg at vi held ein ball i lufta, og skal måle den potensielle energien. Det er naturleg å rekne bakken som nullnivået.
+          Men kva om nullnivået er på eit hustak? Då vert den potensielle energien negativ, men det går heilt fint!
+          Dette nyttar vi med kuleladningane, og set nemleg nullnivået \(R\to\infty\).
+          Vi set dette inn i uttrykket, og ser kvifor dette er lurt:
+          $$
+            \begin{aligned}
+              \lim_{R\to\infty}{W}&=\lim_{R\to\infty}{kqQ\left(\frac{1}{r}-\frac{1}{R}\right)} \\
+              &=kQq\left(\frac{1}{r}-\frac{1}{\infty}\right) \\
+              &=kQq\left(\frac{1}{r}\right) \\
+              &=\frac{kQq}{r}
+            \end{aligned}
+          $$
         </p>
       </article>
       <aside>
