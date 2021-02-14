@@ -1,4 +1,3 @@
-
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
   canvas = document.getElementById("canvas");
@@ -39,4 +38,4 @@ function handleComplete(evt,comp) {
   fnStartAnimation();
 }
 
-window.addEventListener("load", init)
+window.addEventListener("load", init);
