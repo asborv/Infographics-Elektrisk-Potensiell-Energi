@@ -26,4 +26,8 @@ h2 {
   text-align: center;
   text-decoration: underline;
 }
+
+canvas {
+  width: 30px;
+}
 /*# sourceMappingURL=style.css.map */
