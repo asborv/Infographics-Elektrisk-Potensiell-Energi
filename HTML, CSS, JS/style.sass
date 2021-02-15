@@ -1,7 +1,14 @@
 // category variables
 
-$debugborder: 2px solid red
+$debug-border: 2px solid red
+$table-border: .2rem solid black
 
+// link https://coolors.co/9e788f-a9b3ce-7cdedc-7284a8-474954
+$mountbatten-pink: #9e788fff
+$wild-blue-yonder: #a9b3ceff
+$middle-blue-green: #7cdedcff
+$shadow-blue: #7284a8ff
+$dark-liver: #474954ff
 
 
 // category style
@@ -9,6 +16,26 @@ $debugborder: 2px solid red
 body
   margin: 0
   font-family: Arial, Helvetica, sans-serif
+  font-size: 1.2em
+
+header
+  margin: 2em
+  padding: 3em 3em 12em 3em
+  text-align: center
+
+  // Banner for header
+  // link https://css-tricks.com/ (studied source code)
+  &::after
+    content: ""
+    display: block
+    width: 100vw
+    height: 30em // margin, padding & content from header
+    background: linear-gradient($mountbatten-pink, $dark-liver)
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%)
 
 main
   width: 80vw
@@ -16,7 +43,6 @@ main
   margin: 0 auto
 
 section
-  border: $debugborder
   display: grid
   grid-template-rows: auto auto
   grid-template-columns: 2fr 1fr
@@ -26,3 +52,19 @@ h2
   grid-column: span 2
   text-align: center
   text-decoration: underline
+
+table
+  margin: 1em
+  grid-column: span 2
+  border: $table-border
+  border-collapse: collapse
+
+  th
+    padding: 1em
+    font-size: 1.2em
+
+  tr, td
+    padding: .6em
+  
+  th, tr, td
+    border: $table-border

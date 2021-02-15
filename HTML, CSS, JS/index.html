@@ -13,9 +13,13 @@
   <!-- link https://www.youtube.com/watch?v=ZdbudxV3bYI&feature=emb_title&ab_channel=SeazenStudio -->
   <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
   <script src="../assets/Animations/Work r - R.js"></script>
-  <script src="../assets/Animations/Hanging ball.js"></script>
+  <!-- <script src="../assets/Animations/Hanging ball.js"></script> -->
+  <!--
+    cannot import both animations due to namespace leaks
+    The the second of the 2 below will be loaded with TypeError
+  -->
+  <!-- <script src="load ball-animations.js"></script> -->
   <script src="load work-animations.js"></script>
-  <script src="load ball-animations.js"></script>
 </head>
 <body>
 
@@ -25,30 +29,48 @@
 
   <main>
 
-    <section>
+    <section class="symbolar-og-konstantar-section">
       <h2>Symbolar og konstantar</h2>
       <table>
-        <!--
-          Legg inn:
-          E_p
-          E_k
-          Q
-          q
-        -->
         <tr>
           <th>Symbol</th>
-          <th>Verdi</th>
           <th>Skildring</th>
+          <th>Verdi</th>
         </tr>
         <tr>
           <td>\(k\)</td>
-          <td>\(8,99*10^9 \frac{Nm^2}{C^2}\) (I vakuum)</td>
           <td>Coulombkonstanten: Proporsjonalitetskonstant for elektrostatiske likningar</td>
+          <td>\(8,99*10^9 \frac{Nm^2}{C^2}\) (I vakuum)</td>
+        </tr>
+        <tr>
+          <td>\(E_p\)</td>
+          <td>Potensiell energi</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>\(Q\)</td>
+          <td>Stor ladning</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>\(q\)</td>
+          <td>Lita ladning</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>\(F\)</td>
+          <td>Elektrisk kraft</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>\(G\)</td>
+          <td>Tyngdekraft</td>
+          <td></td>
         </tr>
       </table>
     </section>
 
-    <section>
+    <section class="coulombs-lov-section">
       <h2>Coulombs lov</h2>
       <article>
         <p>
@@ -56,11 +78,9 @@
           - Alle klisjéfilmar i heile verdshistoria
           <br>
           <br>
-          Dette har du nok høyrd før, men har Charles Augustin de Coulomb nokonsinne fått æra for det?
-          Kanskje det er på tide å ordne det, og lære om <i>Coulombs lov</i>!
           Mellom to ladningar \(Q_1\) og \(Q_2\) verkar det elektriske krefter!
           Frå Newtons 3. lov veit vi at desse to kreftene er like store, og motsett retta.
-          Coulombs lov gjev dei ein storleik og retning. Lova seier at
+          Coulombs lov seier at:
           $$ F=\frac{kQ_1Q_2}{r^2} $$
           der \(F\) er den elektriske krafta, og \(r\) er avstanden mellom sentrum i dei to partiklane.
         </p>
@@ -93,6 +113,7 @@
         Men då må du fyrst gjere eit arbeid på ballen, <b>mot</b> tyngdekrafta.
         Då aukar den potensielle energien.
         Dermed konkluderer du med at ballen har <i>negativ</i> potensiell energi i forhold til taket.
+        <!-- todo matematisk notasjon her? -->
         <br>
         <br>
         <h3>Vi tek med oss 3 viktige reglar:</h3>
@@ -125,7 +146,7 @@
           I vårt system, er \(r\) og \(R\) to avstandar frå sentrum av \(Q\).
           <br>
           <br>
-          Arbeid er det bestemte integralet av krafta mellom to punkt. Vi kjenner kraft, noverande posisjon og "målet". Dermed kan vi trikse litt med algebra. Hugs at \(F=\frac{kQq}{x^2}\):
+          Arbeid er det bestemte integralet av krafta mellom to punkt. Vi kjenner kraft, noverande posisjon og nullpunktet. Dermed kan vi trikse litt med algebra. Hugs at \(F=\frac{kQq}{x^2}\):
           $$
             \begin{aligned}
               W&=\int_r^R{F\ dx} \\
@@ -137,8 +158,7 @@
           $$
           I dette uttrykket, er det éin variabel som ikkje vert fastsett av systemet, nemleg \(R\).
           Vi målar energien i \(r\) i forhold til <i>nullnivået</i> \(R\), så vi må ha eit fast punkt.
-          Sjå føre deg at vi held ein ball i lufta, og skal måle den potensielle energien. Det er naturleg å rekne bakken som nullnivået.
-          Men kva om nullnivået er på eit hustak? Då vert den potensielle energien negativ, men det går heilt fint!
+          Vi hugsar fra ballen at vi kan velje nullpunkt, og at det kan gje negativ potensiell energi.
           Dette nyttar vi med kuleladningane, og set nemleg nullnivået \(R\to\infty\).
           Vi set dette inn i uttrykket, og ser kvifor dette er lurt:
           $$
@@ -160,6 +180,7 @@
         </div>
       </aside>
     </section>
+  
   </main>
 
 
