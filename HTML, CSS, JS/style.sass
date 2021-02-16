@@ -2,6 +2,7 @@
 
 $debug-border: 2px solid red
 $table-border: .2rem solid black
+$section-space: 12em
 
 // link https://coolors.co/9e788f-a9b3ce-7cdedc-7284a8-474954
 $mountbatten-pink: #9e788fff
@@ -11,42 +12,62 @@ $shadow-blue: #7284a8ff
 $dark-liver: #474954ff
 
 
+
+// category mixins
+
+// link https://css-tricks.com/ (studied source code)
+@mixin diagonal-divide($start-colour, $end-colour, $span: false, $height: $section-space, $position: absolute, $header-banner: false)
+  &::after
+    content: ""
+    display: block
+    width: 100%
+    @if $span
+      grid-column: span 2 
+    height: $height
+    background: linear-gradient($start-colour, $end-colour)
+    position: $position
+    top: 0
+    left: 0
+    z-index: -1
+    // var under
+    @if $header-banner
+      clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%)
+    @else
+      clip-path: polygon(0% 100%, 100% 0%, 100% 100%)
+      
+       
+
+
 // category style
 
 body
   margin: 0
   font-family: Arial, Helvetica, sans-serif
   font-size: 1.2em
+  display: flex
+  flex-flow: row wrap
+  justify-content: center
 
 header
   margin: 2em
-  padding: 3em 3em 12em 3em
+  padding: 3em 3em 14em 3em
   text-align: center
-
-  // Banner for header
-  // link https://css-tricks.com/ (studied source code)
-  &::after
-    content: ""
-    display: block
-    width: 100vw
-    height: 30em // margin, padding & content from header
-    background: linear-gradient($mountbatten-pink, $dark-liver)
-    position: absolute
-    top: 0
-    left: 0
-    z-index: -1
-    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%)
+  @include diagonal-divide($start-colour: blue, $end-colour: pink, $span: false, $height: $section-space, $position: absolute, $header-banner: true)
 
 main
-  width: 80vw
-  max-width: 1600px
-  margin: 0 auto
+  width: 100vw
+  //// max-width: 1600px
 
 section
+  // margin-top: 12em
+  width: 100%
   display: grid
-  grid-template-rows: auto auto
+  grid-template-rows: auto auto $section-space
   grid-template-columns: 2fr 1fr
   column-gap: 4em
+  position: relative
+  @include diagonal-divide($span: true, $start-colour: green, $end-colour: red, $position: relative)
+  
 
 h2
   grid-column: span 2
