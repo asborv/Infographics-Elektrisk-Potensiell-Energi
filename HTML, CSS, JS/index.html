@@ -9,17 +9,15 @@
   <!-- import Mathjax -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <!-- scripts for animations -->
+  <!--
+    scripts for animations
+    Cannot import both animations as Adobe generated due to namespace leaks
+    Solved by exporting ball as gif
+  -->
   <!-- link https://www.youtube.com/watch?v=ZdbudxV3bYI&feature=emb_title&ab_channel=SeazenStudio -->
   <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
-  <!-- <script src="../assets/Animations/Work r - R.js"></script> -->
-  <script src="../assets/Animations/Hanging ball.js"></script>
-  <!--
-    cannot import both animations due to namespace leaks
-    The the second of the 2 below will be loaded with TypeError
-  -->
-  <script src="load ball-animations.js"></script>
-  <!-- <script src="load work-animations.js"></script> -->
+  <script src="../assets/Animations/Work r - R.js"></script>
+  <script src="load work-animations.js"></script>
 </head>
 <body>
 
@@ -125,11 +123,7 @@
         </article>
       </article>
       <aside>
-        <div id="animation_container_ball">
-          <canvas id="canvas_ball"></canvas>
-          <div id="dom_overlay_container_ball">
-          </div>
-        </div>
+        <img src="../assets/Animations/Hanging-ball.gif" alt="Ein ball vert sleppt ned på eit bord, og sprett. Vert deretter heisa opp på høgd med hustak, og heisa ned til original høgd.">
       </aside>
     </section>
 
