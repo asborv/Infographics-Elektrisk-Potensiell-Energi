@@ -92,7 +92,7 @@ section:nth-of-type(odd) h2 {
 h2 {
   position: relative;
   padding: 0 2em;
-  top: -5em;
+  top: -4em;
   grid-column: span 2;
   text-decoration: underline;
 }
