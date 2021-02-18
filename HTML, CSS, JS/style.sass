@@ -21,21 +21,36 @@ $dark-liver: #474954ff
     content: ""
     display: block
     width: 100%
-    @if $span
-      grid-column: span 2 
     height: $height
     background: linear-gradient($start-colour, $end-colour)
     position: $position
-    top: 0
+
+    // Avoids background from shining throught between <section> and ::after
+    @if $position == relative
+      bottom: -1px
+      
+    @if $span
+      grid-column: span 2 
+    @else
+      top: 0
     left: 0
-    z-index: -1
-    // var under
+
     @if $header-banner
+      z-index: -1
       clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%)
     @else
+      z-index: 0
       clip-path: polygon(0% 100%, 100% 0%, 100% 100%)
-      
-       
+
+  // Alternates right/left tilt of diagonal divide
+  // Avoids touching ::after of <header>
+  &:nth-of-type(odd):not(header)::after
+    clip-path: polygon(0% 100%, 0% 0%, 100% 100%)
+
+  // Avoids diagonal at the bottom of document
+  &:last-of-type:not(header)::after
+    display: none
+
 
 
 // category style
@@ -50,28 +65,35 @@ body
 
 header
   margin: 2em
-  padding: 3em 3em 14em 3em
+  padding: 3em
   text-align: center
-  @include diagonal-divide($start-colour: blue, $end-colour: pink, $span: false, $height: $section-space, $position: absolute, $header-banner: true)
+  @include diagonal-divide($start-colour: $wild-blue-yonder, $end-colour: $middle-blue-green, $span: false, $height: $section-space, $position: absolute, $header-banner: true)
 
 main
   width: 100vw
-  //// max-width: 1600px
 
 section
-  // margin-top: 12em
+  background: linear-gradient($shadow-blue, $mountbatten-pink)
   width: 100%
   display: grid
   grid-template-rows: auto auto $section-space
   grid-template-columns: 2fr 1fr
   column-gap: 4em
   position: relative
-  @include diagonal-divide($span: true, $start-colour: green, $end-colour: red, $position: relative)
-  
+  @include diagonal-divide($span: true, $start-colour: $dark-liver, $end-colour: $shadow-blue, $position: relative)
+
+  // nth-of-type on <section> since <h2>s are not siblings
+  // link https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-of-type
+  &:nth-of-type(odd)
+    h2
+      text-align: right
+
 
 h2
+  position: relative
+  padding: 0 2em
+  top: -5em
   grid-column: span 2
-  text-align: center
   text-decoration: underline
 
 table
