@@ -16,26 +16,29 @@ $dark-liver: #474954ff
 // category mixins
 
 // link https://css-tricks.com/ (studied source code)
-@mixin diagonal-divide($start-colour, $end-colour, $span: false, $height: $section-space, $position: absolute, $header-banner: false)
+@mixin diagonal-divide($start-colour, $end-colour, $height: $section-space, $header-banner: false)
   &::after
     content: ""
     display: block
     width: 100%
-    @if $span
-      grid-column: span 2 
     height: $height
     background: linear-gradient($start-colour, $end-colour)
-    position: $position
-    top: 0
     left: 0
-    z-index: -1
-    // var under
-    @if $header-banner
-      clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%)
-    @else
-      clip-path: polygon(0% 100%, 100% 0%, 100% 100%)
-      
-       
+    z-index: 0
+    clip-path: polygon(0% 100%, 100% 0%, 100% 100%)
+
+    @if not $header-banner
+      grid-column: span 2 
+
+  // Alternates right/left tilt of diagonal divide
+  // Avoids <header> such that its ::after lines up with alternating <h2>-rules
+  &:nth-of-type(odd):not(header)::after
+    clip-path: polygon(0% 100%, 0% 0%, 100% 100%)
+
+  // Avoids diagonal at the bottom of document
+  &:last-of-type:not(header)::after
+    display: none
+
 
 
 // category style
@@ -49,29 +52,34 @@ body
   justify-content: center
 
 header
-  margin: 2em
-  padding: 3em 3em 14em 3em
+  width: 100%
+  background: linear-gradient($middle-blue-green, $mountbatten-pink)
   text-align: center
-  @include diagonal-divide($start-colour: blue, $end-colour: pink, $span: false, $height: $section-space, $position: absolute, $header-banner: true)
+  @include diagonal-divide($start-colour: $wild-blue-yonder, $end-colour: $shadow-blue, $header-banner: true)
 
 main
   width: 100vw
-  //// max-width: 1600px
 
 section
-  // margin-top: 12em
+  background: linear-gradient($shadow-blue, $mountbatten-pink)
   width: 100%
   display: grid
   grid-template-rows: auto auto $section-space
   grid-template-columns: 2fr 1fr
   column-gap: 4em
   position: relative
-  @include diagonal-divide($span: true, $start-colour: green, $end-colour: red, $position: relative)
-  
+  @include diagonal-divide($start-colour: $dark-liver, $end-colour: $shadow-blue)
+
+  // nth-of-type on <section> since <h2>s are not siblings
+  // link https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-of-type
+  &:nth-of-type(odd) h2
+    text-align: right
 
 h2
+  position: relative
+  padding: 0 2em
+  top: -4em
   grid-column: span 2
-  text-align: center
   text-decoration: underline
 
 table

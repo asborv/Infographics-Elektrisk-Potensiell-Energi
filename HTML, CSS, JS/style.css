@@ -15,8 +15,9 @@ body {
 }
 
 header {
-  margin: 2em;
-  padding: 3em 3em 14em 3em;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#7cdedcff), to(#9e788fff));
+  background: linear-gradient(#7cdedcff, #9e788fff);
   text-align: center;
 }
 
@@ -25,14 +26,21 @@ header::after {
   display: block;
   width: 100%;
   height: 12em;
-  background: -webkit-gradient(linear, left top, left bottom, from(blue), to(pink));
-  background: linear-gradient(blue, pink);
-  position: absolute;
-  top: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#a9b3ceff), to(#7284a8ff));
+  background: linear-gradient(#a9b3ceff, #7284a8ff);
   left: 0;
-  z-index: -1;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
+  z-index: 0;
+  -webkit-clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+          clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+}
+
+header:nth-of-type(odd):not(header)::after {
+  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 100%);
+          clip-path: polygon(0% 100%, 0% 0%, 100% 100%);
+}
+
+header:last-of-type:not(header)::after {
+  display: none;
 }
 
 main {
@@ -40,6 +48,8 @@ main {
 }
 
 section {
+  background: -webkit-gradient(linear, left top, left bottom, from(#7284a8ff), to(#9e788fff));
+  background: linear-gradient(#7284a8ff, #9e788fff);
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -56,21 +66,34 @@ section::after {
   content: "";
   display: block;
   width: 100%;
-  grid-column: span 2;
   height: 12em;
-  background: -webkit-gradient(linear, left top, left bottom, from(green), to(red));
-  background: linear-gradient(green, red);
-  position: relative;
-  top: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#474954ff), to(#7284a8ff));
+  background: linear-gradient(#474954ff, #7284a8ff);
   left: 0;
-  z-index: -1;
+  z-index: 0;
   -webkit-clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
           clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+  grid-column: span 2;
+}
+
+section:nth-of-type(odd):not(header)::after {
+  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 100%);
+          clip-path: polygon(0% 100%, 0% 0%, 100% 100%);
+}
+
+section:last-of-type:not(header)::after {
+  display: none;
+}
+
+section:nth-of-type(odd) h2 {
+  text-align: right;
 }
 
 h2 {
+  position: relative;
+  padding: 0 2em;
+  top: -4em;
   grid-column: span 2;
-  text-align: center;
   text-decoration: underline;
 }
 
