@@ -27,47 +27,6 @@
 
   <main>
 
-    <section class="symbolar-og-konstantar-section">
-      <h2>Symbolar og konstantar</h2>
-      <table>
-        <tr>
-          <th>Symbol</th>
-          <th>Skildring</th>
-          <th>Verdi</th>
-        </tr>
-        <tr>
-          <td>\(k\)</td>
-          <td>Coulombkonstanten: Proporsjonalitetskonstant for elektrostatiske likningar</td>
-          <td>\(8,99*10^9 \frac{Nm^2}{C^2}\) (I vakuum)</td>
-        </tr>
-        <tr>
-          <td>\(E_p\)</td>
-          <td>Potensiell energi</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>\(Q\)</td>
-          <td>Stor ladning</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>\(q\)</td>
-          <td>Lita ladning</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>\(F\)</td>
-          <td>Elektrisk kraft</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>\(G\)</td>
-          <td>Tyngdekraft</td>
-          <td></td>
-        </tr>
-      </table>
-    </section>
-
     <section class="coulombs-lov-section">
       <h2>Coulombs lov</h2>
       <article>
@@ -80,11 +39,16 @@
           Frå Newtons 3. lov veit vi at desse to kreftene er like store, og motsett retta.
           Coulombs lov seier at:
           $$ F=\frac{kQ_1Q_2}{r^2} $$
-          der \(F\) er den elektriske krafta, og \(r\) er avstanden mellom sentrum i dei to partiklane.
+          der \(F\) er den elektriske krafta, \(k\) er Coulombkonstanten og \(r\) er avstanden mellom sentrum i dei to partiklane.
+          <strong>Nedst på sida finn du ei oversikt over dei matematiske symbola brukt.</strong>
         </p>
       </article>
       <aside>
-        <img src="../assets/Illustrations/Force E-P.svg" alt="Krafta mellom proton og elektron. Krafta verkar tiltrekkjande">
+        <img
+          src="../assets/Illustrations/Force E-P.svg"
+          alt="Krafta mellom proton og elektron. Krafta verkar tiltrekkjande"
+          width="100%"
+        >
       </aside>
     </section>
 
@@ -139,7 +103,9 @@
           I vårt system, er \(r\) og \(R\) to avstandar frå sentrum av \(Q\).
           <br>
           <br>
-          Arbeid er det bestemte integralet av krafta mellom to punkt. Vi kjenner kraft, noverande posisjon og nullpunktet. Dermed kan vi trikse litt med algebra. Hugs at \(F=\frac{kQq}{x^2}\):
+          Vi kjenner kraft, noverande posisjon og nullpunktet.
+          Dermed kan vi trikse litt med algebra for å finne arbeid.
+          Hugs at \(F=\frac{kQq}{x^2}\):
           $$
             \begin{aligned}
               W&=\int_r^R{F\ dx} \\
@@ -166,12 +132,58 @@
       </article>
       <aside>
         <!-- Adobe generated -->
-        <div id="animation_container_work">
+        <figure id="animation_container_work">
           <canvas id="canvas_work" width="30" height="30"></canvas>
+          <figcaption>
+            Eit elektron i eit heliumatom vert <i>eksitert</i> frå \(r\) til \(R\).
+            Den elektriske krafta trekk elektronet <i>mot</i> kjerna, og arbeidet verkar mot kraftretnniga.
+            Den potensielle energien aukar.
+          </figcaption>
           <div id="dom_overlay_container_work">
           </div>
-        </div>
+        </figure>
       </aside>
+    </section>
+
+    <section class="symbolar-og-konstantar-section">
+      <h2>Symbolar og konstantar</h2>
+      <table>
+        <tr>
+          <th>Symbol</th>
+          <th>Forklaring</th>
+          <th>Verdi</th>
+        </tr>
+        <tr>
+          <td>\(k\)</td>
+          <td>Coulombkonstanten: Proporsjonalitetskonstant for elektrostatiske likningar</td>
+          <td>\(8,99*10^9 \frac{Nm^2}{C^2}\) (I vakuum)</td>
+        </tr>
+        <tr>
+          <td>\(E_p\)</td>
+          <td>Potensiell energi</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>\(Q\)</td>
+          <td>Stor ladning</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>\(q\)</td>
+          <td>Lita ladning</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>\(F\)</td>
+          <td>Elektrisk kraft</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>\(G\)</td>
+          <td>Tyngdekraft</td>
+          <td></td>
+        </tr>
+      </table>
     </section>
   
   </main>
@@ -182,3 +194,11 @@
   <script src="index.js"></script>
 </body>
 </html>
+
+<!-- 
+  TODOS
+  animasjonar i header
+  interaktive krefter
+  integral-animasjon
+  parallakse? https://medium.com/@dailyfire/pure-css-parallax-simple-tricks-da102d0ffdb9
+ -->
