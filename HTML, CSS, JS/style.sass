@@ -29,7 +29,7 @@ $dark-liver: #474954ff
     clip-path: polygon(0% 100%, 100% 0%, 100% 100%)
 
     @if not $header-banner
-  // Alternates right/left tilt of diagonal divide
+      grid-column: span 2
 
   // Alternates right/left tilt of diagonal divide
   // Avoids <header> such that its ::after lines up with alternating <h2>-rules
@@ -46,6 +46,7 @@ $dark-liver: #474954ff
 
 body
   margin: 0
+  font-size: 1.4em
   font-family: Arial, Helvetica, sans-serif
   flex-flow: row wrap
   display: flex
@@ -56,6 +57,8 @@ header
   width: 100%
   background: linear-gradient($middle-blue-green, $mountbatten-pink)
   text-align: center
+  @include diagonal-divide($start-colour: $dark-liver, $end-colour: $shadow-blue, $header-banner: true)
+
 h1
   font-size: 3em
   height: 8em
