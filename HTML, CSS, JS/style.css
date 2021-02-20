@@ -128,4 +128,8 @@ table tr, table td {
 table th, table tr, table td {
   border: 0.2rem solid black;
 }
+
+g[data-name=Electron] > *:hover, g[data-name=Proton] > *:hover {
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
