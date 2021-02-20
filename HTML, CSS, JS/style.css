@@ -55,10 +55,6 @@ main {
   width: 100vw;
 }
 
-main {
-  width: 100vw;
-}
-
 section {
   background: -webkit-gradient(linear, left top, left bottom, from(#7284a8ff), to(#9e788fff));
   background: linear-gradient(#7284a8ff, #9e788fff);
@@ -102,15 +98,14 @@ section:nth-of-type(odd) h2 {
   text-align: right;
 }
 
-h2 {
-  position: relative;
+section > * {
+  padding: 0 2rem;
 }
 
 h2 {
   position: relative;
   grid-column: span 2;
   top: -4em;
-  grid-column: span 2;
   text-decoration: underline;
 }
 
