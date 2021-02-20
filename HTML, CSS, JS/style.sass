@@ -66,8 +66,6 @@ h1
   
 main
   width: 100vw
-main
-  width: 100vw
 
 section
   background: linear-gradient($shadow-blue, $mountbatten-pink)
@@ -83,15 +81,17 @@ section
   // link https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-of-type
   &:nth-of-type(odd) h2
     text-align: right
+  
+  &>*
+    padding: 0 2rem
 
+// aside>*
+//   width: 100%
 
-h2
-  position: relative
 h2
   position: relative
   grid-column: span 2
   top: -4em
-  grid-column: span 2
   text-decoration: underline
 
 table
