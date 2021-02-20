@@ -2,6 +2,18 @@
 
 -------------------------------------------
 
+## Forkunnskapar
+
+Legg inn dette
+
+## Verd å merke
+
+### Ladningane i Coulombs lov
+
+I visninga av Coulombs lov har eg kopiert SVG-kode. Dette fordi eit vanleg `<img>`-element ikkje strekk til for det som var naudsynt i dette tilfellet. Med éin gong ein SVG vert pakka i eit `<img>`-element, mister ein dei individuelle elementa. For å gjere det interaktivt, måtte eg kunne kople dei via JavaScript, og eg fann ingen god måte å importere dei som fil (`<svg src="...">` fungerte ikkje.).
+
+Vidare er ikkje løysinga heilt ferdig, som vi kan sjå på partikla sjølve når ein byttar om. Gratientane som vert refererte får ikkje endra posisjonen mellom dei to ladningane. Dette resulterer i at når ladninga som startar som elektron byttar til proton, verkar det som at fargen er uniform. I røynda er det berre at sentrum i gradienten framleis ligg i sentrum til protonet. Teksten gjer òg noko merkeleg hopping, og det vert ikkje prioritert.
+
 ## Skjematiske krav
 
 Nedbrutte kompetansemål| Låg | Middels | Høg
