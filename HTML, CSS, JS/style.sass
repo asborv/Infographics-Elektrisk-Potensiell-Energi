@@ -85,9 +85,6 @@ section
   &>*
     padding: 0 2rem
 
-// aside>*
-//   width: 100%
-
 h2
   position: relative
   grid-column: span 2
@@ -109,3 +106,8 @@ table
   
   th, tr, td
     border: $table-border
+
+// link https://stackoverflow.com/questions/12340737/specify-multiple-attribute-selectors-in-css
+g[data-name=Electron], g[data-name=Proton]
+  >*:hover
+    cursor: pointer

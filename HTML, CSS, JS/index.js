@@ -37,6 +37,7 @@ function evalV(charge1, charge2) {
   const rotation = attract ? 0 : 180;
   
   // Rotate both vectors around center of charge
+  // link https://stackoverflow.com/questions/23098309/svg-rotation-using-javascript
   vector1.setAttribute("transform", `rotate(${rotation})`);
   vector2.setAttribute("transform", `rotate(${rotation})`);
 }
