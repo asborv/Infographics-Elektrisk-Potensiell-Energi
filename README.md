@@ -2,16 +2,22 @@
 
 -------------------------------------------
 
-## Forkunnskapar
+## Om infografikken og forkunnskapar
 
-Legg inn dette
+Infografikken er meint til å bli nytta med ein nettlesar på PC. Han er ikkje laga responsiv, og er stort sett testa på 1440p.
+
+Bodskapen i infografikken er avgrensa til prov for elektrisk potensiell energi, men inkluderer døme for å gjere dette lettare å forstå. Det vert ikkje forklart kva ein kan bruke dette til, eller gjeve matematiske døme. Han vil fungere betre som fordjuping i akkurat dette emnet. Målgruppa er dei som lærer dette for fyrste gong, eller dei som søkjer etter å forstå fenomenet betre.
+
+Det er nemleg venta at lesaren skal ha noko kunnskap om fysikk før han byrjar på denne infografikken. Det vil nok vere vanskeleg å forstå om ein ikkje har vore gjennom fysikk 1 og delar av fysikk 2. Ein må kunne den matematiske samanhengen mellom krefter og arbeid for ikkje-konstante krefter. I tillegg bør han ha kunnskap om oppbyggjinga til atom, og det hjelp godt å vite korleis ladde partiklar tiltrekkjer/støyter frå andre partiklar.
 
 ## Val av format/oppløysing og liknande
 
 ### Hanging ball
 
 Det var mykje styr med denne fila. Fyrst av alt, hadde eg tenkt å bruke Animate sin web-integrasjon, men det vart rot når eg hadde fleire animasjonar på same side. Dette er kommentert der det er relevant. Vidare valde eg å eksportere som gif som alternativ 2. Når eg køyrde [Lighthouse](https://developers.google.com/web/tools/lighthouse) på nettsida, fekk eg kjeft for dette:
+
 ![Large GIFs are inefficient for delivering animated content. Consider using MPEG4/WebM for animations ans PNG/WebP for static images instead of GIF to save network bytes.](./assets/READMEimages/LighthouseGIF.jpg)
+
 Eg følgde [lenka](https://web.dev/efficient-animated-content/?utm_source=lighthouse&utm_medium=devtools), og brukte ffmpeg for å konvertere til webm. Diverre kjem det fram kompresjonsartefaktar no, men det er ikkje så merkeleg. Animate kan ikkje eksportere til webm, og med så mange stopp, er videoen dømt til å møte konsekvensar i kvalitet. Det viktige er at videoen framleis viser ballen tydeleg og at vi slepp unna gamle standardar. Det skal seiast at .webm-fila er 40 kB mot 4,5 MB på .gif-fila.
 
 ### Work r - R
@@ -25,6 +31,7 @@ Alle statiske grafiske ressursar eg brukte, bygde eg i svg. Dette fordi det form
 ### Lighthouse
 
 Sidan ytelse er ein del av denne oppgåva, brukte eg Lighthouse til å sjekke det. Primært media, som vist over. Etter å ha eliminiert gif og lagt inn noko meta, var Lighthouse nøgd
+
 ![4x 100 poeng frå Lighthouse](./assets/READMEimages/Lighthouse100.jpg)
 
 ## Verd å merke
@@ -40,17 +47,12 @@ Vidare er ikkje løysinga heilt ferdig, som vi kan sjå på partikla sjølve nå
 Eg hadde planar om å leggje til ein animert bakgrunn til `<header>`, slik som [her](https://tympanus.net/Development/AnimatedHeaderBackgrounds/index3.html). Planen var eit animert aluminium-atom, kor elektrona gjekk i roleg bane om kjerna. Dette gjekk strålande, fram til Animate kræsja, og gjorde fila korrupt (Dette skjedde òg med RECOVERY-fila). Under `Visuals Project Files > Animate > Aluminium.fla` ligg fila, uferdig sådan.
 
 **Dette var beskjeden Animate kom med etter kræsj:**
+
 ![Aluminium.fla er korrupt](./assets/READMEimages/Corrupt_Aluminium.png) ![RECOVERY-fila til Aluminium.fla er korrupt](./assets/READMEimages/Corrupt_Aluminium_Recovery.png)
 
 ### `assets > Animations > Work r - R`
 
 Desse filene er kjelder til koden som er inkludert i `index.html` og `index.js` for å animere heliumatomet. `Work r - R.js` vert importert, og eg har kopiert relevant kode frå `Work r - R.html`.
-
-## Skjematiske krav
-
-Nedbrutte kompetansemål| Låg | Middels | Høg
------------------------|-----|---------|----
- Begrunnelsar          |     |         | Forklarar kort kva produktet er, kva det inneheld og i kva form det skal bli brukt. Dette inkluderer å spesifisere ei målgruppe og kva konsekvensar dette har. Begrunner og drøftar tydeleg og konkret val av: størrelse, oppløysning format. _Plasser dette i eit eige dokument du legg ved._
 
 ## Kjelder
 
