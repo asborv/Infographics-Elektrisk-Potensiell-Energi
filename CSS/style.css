@@ -99,6 +99,10 @@ h1 {
 
 h1, h2 {
   font-family: IBM Plex Mono, Arial, Helvetica, sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 main {
