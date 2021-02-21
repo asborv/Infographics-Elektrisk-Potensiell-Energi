@@ -21,6 +21,10 @@ Eg hadde planar om å leggje til ein animert bakgrunn til `<header>`, slik som [
 **Dette var beskjeden Animate kom med etter kræsj:**
 ![Aluminium.fla er korrupt](./assets/READMEimages/Corrupt_Aluminium.png) ![RECOVERY-fila til Aluminium.fla er korrupt](./assets/READMEimages/Corrupt_Aluminium_Recovery.png)
 
+### `assets > Animations > Work r - R`
+
+Desse filene er kjelder til koden som er inkludert i `index.html` og `index.js` for å animere heliumatomet. `Work r - R.js` vert importert, og eg har kopiert relevant kode frå `Work r - R.html`.
+
 ## Skjematiske krav
 
 Nedbrutte kompetansemål| Låg | Middels | Høg
