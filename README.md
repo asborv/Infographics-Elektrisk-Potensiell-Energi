@@ -20,7 +20,7 @@ Dette var animasjonen som kom direkte frå Animate sin web-integrasjon. Eg tenkt
 
 ### Statisk svg
 
-Alle statiske grafiske ressursar eg brukte, bygde eg i svg. Dette fordi det formatet er fantastisk å kunne skalere opp og ned utan konsekvensar i kvalitet eller filstorleik. Desse vart laga i Illustrator og vidare importert til Animate. Her fungerer det godt mellom Adobe-programma, og ein får utnytta svg til sitt ytste. På nettsida har eg eit noko knotete system med `<svg>`. Dette er skildra under [Ladningane i Coulombs lov](./README.md#Ladningane%20i%20Coulombs%20lov)
+Alle statiske grafiske ressursar eg brukte, bygde eg i svg. Dette fordi det formatet er fantastisk å kunne skalere opp og ned utan konsekvensar i kvalitet eller filstorleik. Desse vart laga i Illustrator og vidare importert til Animate. Her fungerer det godt mellom Adobe-programma, og ein får utnytta svg til sitt ytste. På nettsida har eg eit noko knotete system med `<svg>`. Dette er skildra under [Ladningane i Coulombs lov](./README.md#Ladningane-i-Coulombs-lov)
 
 ### Lighthouse
 
