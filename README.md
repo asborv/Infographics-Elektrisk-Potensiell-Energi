@@ -12,7 +12,20 @@ Legg inn dette
 
 Det var mykje styr med denne fila. Fyrst av alt, hadde eg tenkt å bruke Animate sin web-integrasjon, men det vart rot når eg hadde fleire animasjonar på same side. Dette er kommentert der det er relevant. Vidare valde eg å eksportere som gif som alternativ 2. Når eg køyrde [Lighthouse](https://developers.google.com/web/tools/lighthouse) på nettsida, fekk eg kjeft for dette:
 ![Large GIFs are inefficient for delivering animated content. Consider using MPEG4/WebM for animations ans PNG/WebP for static images instead of GIF to save network bytes.](./assets/READMEimages/LighthouseGIF.jpg)
-Eg følgde linken, og brukte ffmpeg for å konvertere til webm. Diverre kjem det fram kompresjonsartefaktar no, men det er ikkje så merkeleg. Animate kan ikkje eksportere til webm, og med så mange stopp, er videoen dømt til å møte konsekvensar i kvalitet. Det viktige er at videoen framleis viser ballen tydeleg og at vi slepp unna gamle standardar.
+Eg følgde [lenka](https://web.dev/efficient-animated-content/?utm_source=lighthouse&utm_medium=devtools), og brukte ffmpeg for å konvertere til webm. Diverre kjem det fram kompresjonsartefaktar no, men det er ikkje så merkeleg. Animate kan ikkje eksportere til webm, og med så mange stopp, er videoen dømt til å møte konsekvensar i kvalitet. Det viktige er at videoen framleis viser ballen tydeleg og at vi slepp unna gamle standardar. Det skal seiast at .webm-fila er 40 kB mot 4,5 MB på .gif-fila.
+
+### Work r - R
+
+Dette var animasjonen som kom direkte frå Animate sin web-integrasjon. Eg tenkte det ville vere den beste løysinga; eg hadde animert alt mtp. at det skulle vere skalerbart. Det vert rendra som eit `<canvas>`-element, men i den oppløysinga som vert oppgitt. Det er greitt, for då får vi framleis biletet i eit fleksibelt format (om ein skulle endre oppløysing).
+
+### Statisk svg
+
+Alle statiske grafiske ressursar eg brukte, bygde eg i svg. Dette fordi det formatet er fantastisk å kunne skalere opp og ned utan konsekvensar i kvalitet eller filstorleik. Desse vart laga i Illustrator og vidare importert til Animate. Her fungerer det godt mellom Adobe-programma, og ein får utnytta svg til sitt ytste.
+
+### Lighthouse
+
+Sidan ytelse er ein del av denne oppgåva, brukte eg Lighthouse til å sjekke det. Primært media, som vist over. Etter å ha eliminiert gif og lagt inn noko meta, var Lighthouse nøgd
+![4x 100 poeng frå Lighthouse](./assets/READMEimages/Lighthouse100.jpg)
 
 ## Verd å merke
 

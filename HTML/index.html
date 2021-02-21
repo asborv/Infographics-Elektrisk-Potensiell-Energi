@@ -2,23 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- link https://www.w3schools.com/tags/tag_meta.asp -->
+  <meta name="description" content="Electric potential energy">
+  <meta name="keywords" content="electromagnetism, potential energy">
+  <meta name="author" content="Asbjørn Olav Orvedal">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elektrisk potensiell energi</title>
   <link rel="stylesheet" href="../CSS/style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
   <link rel="shortcut icon" href="../assets/Images/Electron.svg">
   <!-- import Mathjax -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script defer id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <!--
     scripts for animations
     Cannot import both animations as Adobe generated due to namespace leaks
     Solved by exporting ball as gif
   -->
   <!-- link https://www.youtube.com/watch?v=ZdbudxV3bYI&feature=emb_title&ab_channel=SeazenStudio -->
-  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
-  <script src="../assets/Animations/Work r - R.js"></script>
-  <script src="../JS/load work-animations.js"></script>
+  <script defer src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+  <script defer src="../assets/Animations/Work r - R.js"></script>
+  <script defer src="../JS/load work-animations.js"></script>
   <script defer src="../JS/index.js"></script>
 </head>
 <body>
@@ -184,7 +187,7 @@
       <aside>
         <!-- Adobe generated -->
         <figure id="animation_container_work">
-          <canvas id="canvas_work" width="30" height="30"></canvas>
+          <canvas id="canvas_work" width="600" height="600"></canvas>
           <figcaption>
             Eit elektron i eit heliumatom vert <i>eksitert</i> frå \(r\) til \(R\).
             Den elektriske krafta trekk elektronet <i>mot</i> kjerna, og arbeidet verkar mot kraftretnniga.
