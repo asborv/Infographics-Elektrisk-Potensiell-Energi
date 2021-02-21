@@ -16,11 +16,11 @@ Eg følgde [lenka](https://web.dev/efficient-animated-content/?utm_source=lighth
 
 ### Work r - R
 
-Dette var animasjonen som kom direkte frå Animate sin web-integrasjon. Eg tenkte det ville vere den beste løysinga; eg hadde animert alt mtp. at det skulle vere skalerbart. Det vert rendra som eit `<canvas>`-element, men i den oppløysinga som vert oppgitt. Det er greitt, for då får vi framleis biletet i eit fleksibelt format (om ein skulle endre oppløysing).
+Dette var animasjonen som kom direkte frå Animate sin web-integrasjon. Eg tenkte det ville vere den beste løysinga; eg hadde animert alt mtp. at det skulle vere skalerbart. Det vert rendra som eit `<canvas>`-element, men i den oppløysinga som vert oppgitt. Det er greitt, for då får vi framleis biletet i eit fleksibelt format (om ein skulle endre oppløysing). Per no er det 600×600, som skal vere nok for dei fleste normale skjermoppløysingar.
 
 ### Statisk svg
 
-Alle statiske grafiske ressursar eg brukte, bygde eg i svg. Dette fordi det formatet er fantastisk å kunne skalere opp og ned utan konsekvensar i kvalitet eller filstorleik. Desse vart laga i Illustrator og vidare importert til Animate. Her fungerer det godt mellom Adobe-programma, og ein får utnytta svg til sitt ytste.
+Alle statiske grafiske ressursar eg brukte, bygde eg i svg. Dette fordi det formatet er fantastisk å kunne skalere opp og ned utan konsekvensar i kvalitet eller filstorleik. Desse vart laga i Illustrator og vidare importert til Animate. Her fungerer det godt mellom Adobe-programma, og ein får utnytta svg til sitt ytste. På nettsida har eg eit noko knotete system med `<svg>`. Dette er skildra under [Ladningane i Coulombs lov](./README.md#Ladningane%20i%20Coulombs%20lov)
 
 ### Lighthouse
 
