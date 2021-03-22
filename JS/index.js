@@ -10,8 +10,8 @@ const vector1 = document.querySelector("[data-name='Vector N']");
 const vector2 = document.querySelector("[data-name='Vector P']");
 
 // Tracks if charge is positive/negative
-charge1.setAttribute("data-isPos", 0);
-charge2.setAttribute("data-isPos", 1);
+charge1.dataset.isPos = 0;
+charge2.dataset.isPos = 1;
 
 // TransformOrigin in center of the charge that the vector belongs to
 vector1.style.transformOrigin = `${charge1.children[0].getAttribute("cx")}px ${charge1.children[0].getAttribute("cy")}px`;
@@ -49,7 +49,7 @@ function evalV(charge1, charge2) {
  */
 function swapC(charge) {
   // Alternates 0 & 1 with binary NOT operator
-  charge.setAttribute("data-isPos", Number(!parseInt(charge.dataset.isPos)));
+  charge.dataset.isPos = Number(!parseInt(charge.dataset.isPos));
 
   // Alternates colours
   newColour = charge.children[0].getAttribute("fill") === electronColour
